@@ -1,2 +1,4 @@
 # R-stuff
-Visualization in R
+Regression models
+Visualization
+Data parsing
