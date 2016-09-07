@@ -39,10 +39,9 @@ shinyServer<-function(input, output) {
         # Twilio info(id, token number)
         
         turl <- 'https://api.twilio.com/2010-04-01/Accounts/'
-        aid  <- 'AC44e7a369b9c75945fd0038be2a8d1cc5'
-        atk  <- 'a2d2cbcc2c192e38ac171bbcffd37cd1'
-        twn  <- '+37259122176' # twilio number
-       # myn  <- '+37257878028' # number that receives the message
+        aid  <- 'user id here'
+        atk  <- 'authentication token here'
+        twn  <- 'twilio number here' 
         pswd <- paste0(aid,':',atk)
         sms  <- 'Test this program rocks'        
         rurl<- paste0(turl,aid,'/Messages')
@@ -56,19 +55,3 @@ shinyServer<-function(input, output) {
 
 
 shinyApp(ui=shinyUI,server = shinyServer)
-
-#  post message to your phone first using httr
-
-# getURL(rurl,userpwd=pswd)
-
-# POST(rurl,body = list(From = twn, To = myn, Body = sms), config = authenticate(aid,atk,type = 'basic'))
-
-# now with curl (works but i get a weird error message)
-
-#postForm(rurl,
-#         .opts = list(userpwd = pswd, useragent = "RCurl", verbose = TRUE),
-#         .params = c(From = twn, To = myn, Body = paste(sms, 'with CURL'))
-#        )
-
-lurl<-paste0('https://lookups.twilio.com/v1/PhoneNumbers/myn')
-x<-fromJSON(getURL(lurl,userpwd=pswd))
