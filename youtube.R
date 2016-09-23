@@ -8,7 +8,7 @@ options(stringsAsFactors = FALSE)
 library(plyr)
 
 # login credentials
-yt_oauth("939559094296-25cra5r2otufulsu629lskl3bp9egrnj.apps.googleusercontent.com", "Yj1s5c8MvblcaLny6yyNqlEV")
+yt_oauth("", "")
 
 # work in estonia channel ID = UCWVjpu-NkHTaQW1dNanFseA
 # visit estonia channel   ID = UCw8wdYrQcit2Aqj79ZZefww
